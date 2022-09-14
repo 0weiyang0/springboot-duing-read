@@ -1,33 +1,31 @@
 package com.duing.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.annotation.Generated;
-@Data@AllArgsConstructor@NoArgsConstructor
-public class Book {
+
+public class ChapterContent {
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
     private Long id;
-    
-    private Long authorId;
-    @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private String name;
 
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private String author;
+    private String content;
 
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private String description;
+    public Long getId() {
+        return id;
+    }
 
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private Integer count;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private Integer status;
+    public String getContent() {
+        return content;
+    }
 
     @Generated("org.mybatis.generator.api.MyBatisGenerator")
-    private String type;
-
-
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

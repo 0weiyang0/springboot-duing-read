@@ -20,6 +20,10 @@
 
 <!--        <javaClientGenerator targetPackage="example.mapper" targetProject="src/main/java"/>-->
 <!--数据库的表名-->
-        <table tableName="book" />
+<!--        <table tableName="book" />-->
+        <table tableName="author" />
+        <table tableName="chapter" />
+        <table tableName="chapter_content" />
+
     </context>
 </generatorConfiguration>

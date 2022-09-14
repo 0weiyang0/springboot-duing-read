@@ -7,3 +7,9 @@ spring:
     view:
       prefix: /templates
       suffix: .html
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.duing.model
+  mapper-locations: classpath:mapper/*.xml

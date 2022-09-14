@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>渡一读书</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+</head>
+<body>
+
+
+
+<div>
+    <img  th:src="@{/img/渡一教育.png}" class="duyi-logo">渡一读书
+</div>
+<form th:action="@{/search}">
+    <input type="text" name="keyword" id="keyword">
+    <button>搜索</button>
+</form>
+
+
+</body>
+</html>
