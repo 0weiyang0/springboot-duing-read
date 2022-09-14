@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/project_read?serverTimezone=UTC
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /templates
+      suffix: .html
