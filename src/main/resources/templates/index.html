@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>渡一读书</title>
-    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <div th:include="common :: css_frag"></div>
 </head>
 <body>
-
-
-
 <div>
-    <img  th:src="@{/img/渡一教育.png}" class="duyi-logo">渡一读书
+    <img  th:src="@{/img/渡一教育.png}" class="duyi-logo">
 </div>
 <form th:action="@{/search}">
     <input type="text" name="keyword" id="keyword">
     <button>搜索</button>
 </form>
-
-
 </body>
 </html>
