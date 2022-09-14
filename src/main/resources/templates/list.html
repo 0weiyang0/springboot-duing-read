@@ -15,13 +15,11 @@
         </tr>
         </thead>
         <tbody >
-        <tr>
-            <td th:each="bookVo : ${bookVoList}">
-                <th th:text="${bookVo.name}">name</th>
-                <th><img th:src="@{/img/${bookVo.imgPath}">ImgPath</th>
-                <th th:text="${bookVo.author}">author</th>
-                <th th:text="${bookVo.desc}">desc</th>
-            </td>
+        <tr  th:each="bookVo : ${bookVoList}">
+                <td th:text="${bookVo.name}">name</td>
+                <td><img th:src="@{'/img' + ${bookVo.imgPath}}" />ImgPath</td>
+                <td th:text="${bookVo.author}">author</td>
+                <td th:text="${bookVo.desc}">desc</td>
         </tr>
         </tbody>
     </table>
