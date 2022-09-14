@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>书籍列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
 </head>
 <body>
-    <table>
+    <table class="table table-hover">
         <thead>
         <tr>
             <th>名称</th>
@@ -17,7 +18,7 @@
         <tbody >
         <tr  th:each="bookVo : ${bookVoList}">
                 <td th:text="${bookVo.name}">name</td>
-                <td><img th:src="@{'/img' + ${bookVo.imgPath}}" />ImgPath</td>
+                <td><img th:src="@{'/img/' + ${bookVo.imgPath}}"/>ImgPath</td>
                 <td th:text="${bookVo.author}">author</td>
                 <td th:text="${bookVo.desc}">desc</td>
         </tr>
