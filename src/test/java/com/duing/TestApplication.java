@@ -1,6 +1,7 @@
 package com.duing;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.duing.mapper.UserMapper;
 import com.duing.model.Author;
 import com.duing.model.Book;
@@ -8,6 +9,7 @@ import com.duing.model.User;
 import com.duing.service.AuthorService;
 import com.duing.service.UserService;
 import com.duing.service.impl.BookServiceImpl;
+import com.duing.util.RedisUtil;
 import com.duing.vo.GroupBean;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -85,4 +87,27 @@ public class TestApplication {
         System.out.println();
     }
 
+
+
+    @Test
+    public void testPage() {
+        Page<User> userPage = new Page<>(1, 2);
+        Page<User> page = userService.page(userPage);
+        System.out.println(page == userPage);
+        List<User> list = page.getRecords();
+        System.out.println();
+        page.getCurrent();  //获取当前页
+        page.getSize();
+        page.getTotal();
+    }
+
+    @Autowired
+    private RedisUtil redisUtil;
+
+    @Test
+    public void testRedis(){
+        redisUtil.set("util","redisUtil");
+        String result = (String) redisUtil.get("util");
+        System.out.println(result);
+    }
 }

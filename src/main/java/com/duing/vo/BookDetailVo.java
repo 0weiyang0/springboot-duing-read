@@ -3,8 +3,8 @@ package com.duing.vo;
 import lombok.Data;
 
 @Data
-public class BookVo {
-    private  Long id;
+public class BookDetailVo {
+
     private String name;
     private String author;
     private String imgPath;
